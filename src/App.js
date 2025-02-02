@@ -26,7 +26,7 @@ export default function StopWatch() {
   const timeFormat = (val) => {
     let minute = Math.floor(val / 60);
     let second = val % 60;
-    let format = `${minute}:${second < 10 ? 0 : ""} ${second}`;
+    let format = `${minute}:${second < 10 ? 0 : ""}${second}`;
     return format ;
   };
   return (
@@ -40,7 +40,7 @@ export default function StopWatch() {
       >
         <div>
           <h1>Stopwatch</h1>
-          <span>Time:{timeFormat(value)}</span>
+          <p>Time: {timeFormat(value)}</p>
           <button onClick={handleStartAndStop}>
             {flag ? "Stop" : "Start"}
           </button>
